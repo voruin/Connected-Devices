@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Check-in From</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
+    <script src="Checkin.js"></script>
+  </head>
+
+  <body>
+    <h2>Check-in Form</h2>
+    <form>
+      <label for="fname">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        value=""
+        required
+      /><br /><br />
+      <label for="lname">Last name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        value=""
+        required
+      /><br /><br />
+      <label for="doctorName">Choose your doctor:</label>
+      <select id="doctorName" name="doctorName" required>
+        <option value="Gregory House">Gregory House</option>
+        <option value="John H. Watson">John H. Watson</option></select
+      ><br /><br />
+
+      <label for="appt">Choose your appointment time:</label>
+      <input
+        type="time"
+        id="appt"
+        name="appt"
+        min="09:00"
+        max="18:00"
+        value=""
+        required
+      /><br /><br /><br />
+      <input
+        type="button"
+        id="sendButton"
+        name="sendButton"
+        class="button"
+        value="Submit"
+      /><br /><br /><br /><br /><br /><br /><br />
+      <div id="individualColor">
+        <p></p>
+      </div>
+      <div id="sentMessage"></div>
+      <div id="gotMessage"></div>
+    </form>
+  </body>
+</html>
